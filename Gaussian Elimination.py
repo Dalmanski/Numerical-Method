@@ -128,7 +128,7 @@ y_equation = sp.simplify(y_equation.subs(z, z_constant))
 print(sp.pretty(y_equation))
 y_constant = y_equation.rhs
 
-# Show output solution, solving y equation
+# Show output solution, solving x equation
 print(f"\n{x_equation}")
 eqlhs, eqrhs = x_equation.split("=")
 x_equation_str = str(x_equation)
