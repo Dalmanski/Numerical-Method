@@ -2,6 +2,12 @@ import sympy as sp
 
 x = sp.symbols("x")
 
+# Example 1: x^2 - x - 1 = 0, x_a = 3, x_b = 2
+# The correct answer is 1.618, proof? On Yt video: https://www.youtube.com/watch?v=lN1JXolkKCM&t=121s
+
+# Example 2: x^4 - x - 10, x_a = 1, x_b = 2
+# The correct answer is 1.8556, proof? On Yt video: https://www.youtube.com/watch?v=3g19OMfCpCA
+
 equation_str = input("Enter your equation: ")
 equation_str = equation_str.replace("^", "**")
 

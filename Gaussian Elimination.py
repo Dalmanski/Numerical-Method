@@ -3,17 +3,27 @@ import sympy as sp
 # Define the symbols
 x, y, z = sp.symbols("x y z")
 
+"""Example # 1: Input these 3 equation:
+    x + y - z = -2
+    2*x - y + z = 5
+    -x + 2*y + 2*z = 1
+    The answer is on Yt video: https://www.youtube.com/watch?v=eDb6iugi6Uk&t=417s"""
+
+""" !!! I didn't add 4 equations yet... only 3 equations so I need more time to study... !!! """
+
 # Input the equations
+equation_quantity = int(input("How many equation? "))
+
 equations = []
-"""for i in range(3):
+for i in range(equation_quantity):
     equation_str = input(f"Enter equation {i+1}: ")
     eqlhs, eqrhs = equation_str.split("=")
     equation = sp.Eq(sp.sympify(eqlhs), sp.sympify(eqrhs))
-    equations.append(equation)"""
+    equations.append(equation)
 
-equations.append(sp.Eq(x + y - z, -2))
-equations.append(sp.Eq(2*x - y + z, 5))
-equations.append(sp.Eq(-x + 2*y + 2*z, 1))
+#equations.append(sp.Eq(x + y - z, -2))
+#equations.append(sp.Eq(2*x - y + z, 5))
+#equations.append(sp.Eq(-x + 2*y + 2*z, 1))
 
 # Extract coefficients and constants from the equations
 coefficients = []

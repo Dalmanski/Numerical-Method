@@ -3,6 +3,11 @@ from sympy import *
 
 x = sp.symbols("x")
 
+# Example 1: x^2 - x - 1 = 0
+# The correct answer is -0.618, proof? On Yt video: https://www.youtube.com/watch?v=L321onHPn4U&t=954s
+
+""" !!! There's an error on some equations lol !!! """
+
 equation_str = input("Enter your equation: ")
 equation_str = equation_str.replace("^", "**")
 
@@ -26,9 +31,11 @@ equation = sp.Eq(eqlhs, eqrhs)
 print("Simplify equation: \n", sp.pretty(equation), "\n")
 
 i = 0
-x_new = 0
+x_new = 0.5
 gx = 0
 prev_gx = 0
+
+print(f"Let's say i use x_new = {x_new}\n")
 
 while True:
 

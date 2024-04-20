@@ -2,6 +2,12 @@ import sympy as sp
 
 x = sp.symbols("x")
 
+# Example 1: x^3 - 4*x - 9 = 0
+# The correct answer is 2.7065, proof? On Yt video: https://www.youtube.com/watch?v=qEecNyRa5o4&t=71s
+
+# Example 2: x^3 + 3*x - 5
+# The correct answer is 1.1562, proof? On Yt video: https://www.youtube.com/watch?v=wordn57_Br8
+
 equation_str = input("Enter your equation: ")
 equation_str = equation_str.replace("^", "**")
 
@@ -37,6 +43,7 @@ while True:
 
     if (check_pos_num(substitute) != check_pos_num(prev_substitute)) and i != 0:
         break
+
     prev_substitute = substitute
     i += 1
 
@@ -47,12 +54,10 @@ print(f"\nSince iteration {a} and {b} have both positive and negative number so 
 
 i = 0
 
-print()
-
 """ If substitute is positive, it will replace the b, otherwise it will replace a.
     Repeat until it will approximately equal to the substitute and prev substitute """
 
-print("Formula: (a + b) / 2 = x_1 \n")
+print("\nFormula: (a + b) / 2 = x_1 \n")
 
 while True:
 
