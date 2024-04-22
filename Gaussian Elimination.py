@@ -46,6 +46,7 @@ print(sp.pretty(augmented_matrix), "\n")
 print("Add the row 2 + row 0 and then replace the answer on row 2:", "\n")
 
 """ [row][column] """
+
 for i in range(augmented_matrix.cols):
     augmented_matrix[2, i] += augmented_matrix[0, i]
 
