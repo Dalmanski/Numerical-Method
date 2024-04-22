@@ -58,7 +58,7 @@ while True:
     print(f" = {shorten_deci(x_new)} \n")
 
     if (round(x_new, 3) == round(prev_x_new, 3)):
-            break
+        break
     elif i > 19:
         more_than_20 = True
         break
