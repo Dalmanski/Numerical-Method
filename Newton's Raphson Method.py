@@ -38,7 +38,7 @@ derivative = sp.diff(equation, x)
 print(f"\nDerivative: {derivative} \n")
 
 i = 0
-x_i = 1
+x_i = 0.5
 
 prev_answer = 0
 
@@ -72,7 +72,7 @@ while True:
     print(f"{substitute_eq_str} = {shorten_deci(f_d)}")
 
     print(f"\n{shorten_deci(x_i)} - (f({shorten_deci(f)}) / f'({shorten_deci(f_d)}))")
-    print(f" = {shorten_deci(answer)}\n")
+    print(f"x_i = {shorten_deci(answer)}\n")
 
     # Check if the answer and preview answer is equal by rounded up to 3
     if (round(answer, 3) == round(prev_answer, 3)):
