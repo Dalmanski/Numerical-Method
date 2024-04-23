@@ -53,9 +53,22 @@ while True:
 
     x_new = float(x_a - (fx_a * (x_a - x_b) / (fx_a - fx_b)))
 
-    print("x_a - (f(x_a)(x_a - x_b) / (f(x_a) - f(x_b))")
+    # This is the print-out so it's not important!
+    print("\nSolving f(x_a)):")
+    print(str(equation).replace("**", "^"))
+    substitute_eq_str = str(equation)
+    substitute_eq_str = substitute_eq_str.replace("x", f"({str(shorten_deci(x_a))})").replace("**", "^")
+    print(f"{substitute_eq_str} = {shorten_deci(fx_a)}")
+
+    print("\nSolving f(x_b):")
+    print(str(equation).replace("**", "^"))
+    substitute_eq_str = str(equation)
+    substitute_eq_str = substitute_eq_str.replace("x", f"({str(shorten_deci(x_b))})").replace("**", "^")
+    print(f"{substitute_eq_str} = {shorten_deci(fx_b)}")
+
+    print("\nx_a - (f(x_a)(x_a - x_b) / (f(x_a) - f(x_b))")
     print(f"{shorten_deci(x_a)} - (({shorten_deci(fx_a)})({shorten_deci(x_a)} - {shorten_deci(x_b)}) / ({shorten_deci(fx_a)} - {shorten_deci(fx_b)}))")
-    print(f" = {shorten_deci(x_new)} \n")
+    print(f"x_i = {shorten_deci(x_new)}\n")
 
     if (round(x_new, 3) == round(prev_x_new, 3)):
         break
@@ -65,6 +78,8 @@ while True:
 
     x_a = x_new
     prev_x_new = x_new
+
+    print("x_i = x_a\n")
 
 if not more_than_20:
     print(f"Final answer: {round(x_new, 3)}\n")
